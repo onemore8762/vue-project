@@ -1,30 +1,45 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <the-header></the-header>
+  <div class="app">
+    <router-view></router-view>
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import TheHeader from "@/components/TheHeader.vue";
+
+export default {
+  components: {TheHeader}
+}
+</script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.app {
+  font-family: sans-serif;
+  height: calc(100vh - 50px);
+  position: relative;
+  padding: 20px 40px;
 }
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: none;
+  border: 1px solid rgba(199, 199, 199, 0.58);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(199, 199, 199, 0.25);
+  border: 1px solid rgba(79, 72, 72, 0.39);
+}
+
 </style>
