@@ -51,7 +51,7 @@
       })<strong> // Поиск идентичных id</strong><br><br>
       const arr2 = list2.filter(item => !list1.find(innerItem => innerItem.id === item.id))<br>
       <strong> // Поиск id которых нету в первом массиве объектов</strong><br>
-      return [...newArr, ...arr2]<strong> // Возвращение результата</strong><br>
+      return [...arr1, ...arr2]<strong> // Возвращение результата</strong><br>
       }
     </code>
   </div>
